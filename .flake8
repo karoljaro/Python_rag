@@ -1,0 +1,21 @@
+[flake8]
+max-line-length = 88
+extend-ignore = E203, W503
+select = C90, E, F, W
+max-complexity = 10
+count = true
+show-source = true
+statistics = true
+exclude =
+    .git,
+    __pycache__,
+    .venv,
+    build,
+    dist,
+    .eggs,
+    *.egg-info,
+    .mypy_cache,
+    .pytest_cache,
+    .nox,
+    .tox,
+    migrations
