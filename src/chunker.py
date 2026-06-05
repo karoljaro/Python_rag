@@ -1,7 +1,7 @@
 import re
 
 
-def split_into_sentences(text: str) -> list[str]:
+def _split_into_sentences(text: str) -> list[str]:
     return re.split(r'(?<=[.!?])\s+', text)
 
 
@@ -46,7 +46,7 @@ def _trim_overlap_to_fit(overlap_text: str, sentence: str, max_chunk_size: int) 
 
 
 def chunk_text(text: str, max_chunk_size: int = 512, overlap: int = 64) -> list[str]:
-    sentences = split_into_sentences(text)
+    sentences = _split_into_sentences(text)
 
     chunks = []
     current_chunk = ""
