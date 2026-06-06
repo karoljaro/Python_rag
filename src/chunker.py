@@ -2,7 +2,7 @@ import re
 
 
 def _split_into_sentences(text: str) -> list[str]:
-    return re.split(r'(?<=[.!?])\s+', text)
+    return re.split(r"(?<=[.!?])\s+", text)
 
 
 def _word_boundary_start(text: str, start_index: int) -> int:
